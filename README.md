@@ -4,84 +4,121 @@
 
 google 使ったことあんならわかんだろ
 
-## 導入する
+# アカウント登録
 
-- 導入したいディレクトリに移動する `cd 〇〇/〇〇/〇〇`
-- git を導入するコマンドを打つ `git init`
+Github にアカウントを作ったら PC に自分の Github アカウントを登録しましょう。
 
-- 自分の git アカウントの情報を入力します。
-  - `git config --global user.name "Smash Bros"`
-  - `git config --global user.email smashbros@example.com`
+### 自分の git アカウントの情報を入力します。
 
-## Git の良さ
+- コマンドプロンプト(win) or ターミナル(mac)を起動して
 
-- 変更の履歴が残る
-- 戻したい変更まで戻ることができる
-- PC 内で保存しておく必要がない
-- 共同開発が可能
+```
+git config --global user.name "Smash Bros"
+git config --global user.email smashbros@example.com
+```
+
+## どうやって Github を始めるの？
+
+2 択の読み合い
+
+1. 自分が新たにレポジトリを作る
+2. すでにあるレポジトリに参加する
+
+### 1. 新たに作る
+
+わかりやすいのでウェブの Github のページから行いましょう。
+![How To make new repository](/IMG/Howtomakenewrepository.png)
+
+### 2. すでにあるレポジトリに参加する(clone)
+
+こっちの方がよくあるパターンかもしれません。
+
+すでにレポジトリがあるときにはクローンします
+自分の任意のパスに移動して
+
+```
+cd hogehoge/hogehoge
+```
+
+以下のコマンドを入力
+
+```
+git clone https://github.com/eastgeeksmash/practice.git
+```
+
+![How to clone](/IMG/gitclone.png)
+
+## これでスタートラインに立ちました！
+
+ではここからどのように使うかを詳しく見ていきましょう。
 
 ## よく使うのは大きく分けて 4 つ
 
 これらの操作はまとめて覚える
 
-1. ファイルの追加(add, commit)
-2. ほかの人の変更の取り込み(pull)
+1. ほかの人の変更の取り込み(pull)
+2. ファイルの追加(add, commit)
 3. ブランチの生成(branch)
 4. マージ
 
-## git をクローンする
+### 1.他の人の変更を取り込む(pull)
 
-すでにレポジトリがあるときにはクローンします `git clone https:.....`
+`この操作が最重要です！！！`  
+これを忘れると本当にめんどくさいことになるので、まずは pull しましょう。  
+ほかの人の変更を自分のファイルに反映させましょう。
+任意の git が入っているフォルダにカレンとディレクトを移動して
 
-## 開発を始めるときは
+```
+git pull
+```
 
-ほかの人の変更を自分のファイルに反映させましょう
-`git pull`
+繰り返しになりますが、この操作は作業を開始するときに忘れないでください！  
+`QM スピリットをつけ忘れるくらい罪です。`
 
-## git にファイルを追加する
+### git にファイルを追加する
 
-作成した、もしくはファイルに変更を加えて、レポジトリに更新をかけたいときには
+作成した、もしくはファイルに変更を加えて、レポジトリに更新をかけたいときに以下の作業を行います。
 
-### 手順 1:add
+#### 手順 1:add
 
 `git add 〇〇.hoge`
 または
 `git add .`
 これですべてのファイルを add できます。
 
-### 手順 2:commit
+#### 手順 2:commit
 
 コミットします
 コミットの際には何の変更をしたかを誰にでもわかるように書いておきましょう。
 `git commit -m"ここにメッセージ"`
 
-### 手順 3:push
+#### 手順 3:push
 
 プッシュします
 `git push`
 
-## ブランチについて
+### ブランチについて
 
 ブランチは現在の状態をコピーしたもの
 ブランチを作ることによって、例えばそのブランチ内での変更をしても、本体のほうには変更が行かないので、ミスがあったときに修正してから本体のほうに反映できる。
 
 ![branch_image](https://firebasestorage.googleapis.com/v0/b/hina-blog.appspot.com/o/branch_image.jpg?alt=media&token=7eae3cbf-3dfc-463f-9c92-8e07f60a6b76)
 
-### ブランチの確認
+#### ブランチの確認
 
 `git branck`
 
-### ブランチの作成
+#### ブランチの作成
 
 korehatestdayo_branch という名前のブランチを作る時には
 `git branch korehatestdayo_branch`
 
-### ブランチを切り替える
+#### ブランチを切り替える
 
 korehatestdayo_branch に移動するとき
 `git checkout korehatestdayo_branch`
 
-## マージする
+### マージする
 
 ![push](https://firebasestorage.googleapis.com/v0/b/hina-blog.appspot.com/o/push_image.jpg?alt=media&token=2d7283a2-7bb0-4bcf-8ef7-e714192f611f)
 一つのブランチに統合します。
@@ -107,10 +144,6 @@ korehatestdayo_branch に移動するとき
 
 <br><br><br><br><br><br><br><br><br>
 
-## 実戦練習
+# 実践練習
 
-ここに名前を書いて、上の手順に従って更新してみよう
-
-- HinataAoki
-- Cody
-- Mahiro
+[practice.md](practice.md)に移動して名前を追記してみましょう！
